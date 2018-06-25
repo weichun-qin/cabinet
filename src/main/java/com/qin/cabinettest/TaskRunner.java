@@ -46,6 +46,7 @@ public class TaskRunner implements CommandLineRunner{
         data.setName("hp");
         data.setuBit(dataAttr[2]);
         //是否成功入库
+        //是否入库2.0
         if(cabinetService.update(data)>0){
             System.out.println("成功");
         }else {
