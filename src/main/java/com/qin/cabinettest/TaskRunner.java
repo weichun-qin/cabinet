@@ -45,7 +45,12 @@ public class TaskRunner implements CommandLineRunner{
         data.setUnitType("hp");
         data.setName("hp");
         data.setuBit(dataAttr[2]);
-        System.out.println(cabinetService.update(data));
+
+        if(cabinetService.update(data)>0){
+            System.out.println("成功");
+        }else {
+            System.out.println("失败");
+        }
 /*
         dataMap.put("编号",dataAttr[1]);
         dataMap.put("名称","hp");
